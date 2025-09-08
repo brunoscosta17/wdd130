@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-dark: #33383c;
+  --bg-light: #f2f2f2;
+  --text-main: #1b1b1b;
+  --text-muted: #4a4a4a;
+  --card-border: #d9d9d9;
+  --accent: #2f7dbe;
+  --shadow: rgba(0,0,0,.18);
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
+  color: var(--text-main);
+  background: white;
+  line-height: 1.6;
+}
+
+/* ===== Header ===== */
+.site-header {
+  background: var(--bg-dark);
+  color: #fff;
+  padding: 16px 20px;
+  text-align: center;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-weight: 700;
+  font-size: clamp(18px, 2.2vw + 12px, 28px);
+}
+
+/* ===== Main layout ===== */
+main {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 24px 20px 60px;
+}
+
+/* Título principal da página (templo) */
+.temple-title {
+  text-align: center;
+  font-size: clamp(28px, 3.4vw + 14px, 44px);
+  margin: 12px 0 20px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* ===== Imagem / Hero ===== */
+.hero {
+  margin: 0 auto 24px;
+  display: block;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 8px 18px var(--shadow);
+  overflow: hidden;
+  border: 1px solid var(--card-border);
+  /* largura visual semelhante ao mock */
+  max-width: 640px;
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto; /* preserva proporção */
+}
+
+/* ===== Cards ===== */
+.card {
+  background: var(--bg-light);
+  border: 1px solid var(--card-border);
+  border-radius: 6px;
+  padding: 18px 20px;
+  margin: 0 auto 18px;
+  max-width: 760px;
+  box-shadow: 0 4px 10px var(--shadow);
+}
+
+.card h3 {
+  margin: 0 0 10px;
+  font-size: clamp(18px, 1.2vw + 14px, 22px);
+  border-bottom: 2px solid #bdbdbd;
+  padding-bottom: 6px;
+}
+
+.card p {
+  color: var(--text-muted);
+  margin: 10px 0;
+}
+
+.card a {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+.card ul {
+  margin: 8px 0 0 20px;
+}
+
+.card li + li {
+  margin-top: 6px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--bg-dark);
+  color: #fff;
+  text-align: center;
+  padding: 14px 10px;
+  font-weight: 600;
+  letter-spacing: .3px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero,
+  .card {
+    transition: transform .18s ease, box-shadow .18s ease;
+  }
+  .card:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 8px 18px var(--shadow);
+  }
+}
