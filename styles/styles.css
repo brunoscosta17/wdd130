@@ -58,3 +58,33 @@ footer {
   text-align: center;
   padding: 1rem 0 2rem;
 }
+
+nav {
+  background-color: #0b3d91;
+  padding: 0.5rem 1rem;
+}
+
+nav a {
+  color: #ffffff;
+  padding: 0.5rem 0.75rem;
+  display: block;
+  text-decoration: none;
+}
+
+h1 {
+  color: #1b1b1b;
+}
+
+img {
+  width: 150px;
+  height: auto;
+  border: 1px solid #e0e0e0;
+  padding: 4px;
+  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+  display: block;
+  margin: 0.5rem 0;
+}
+
+aside img { width: 200px; height: auto; }
+
+main img { width: 150px; height: auto; }
