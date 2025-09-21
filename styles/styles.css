@@ -1,11 +1,11 @@
-/* Reset básico */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
 }
@@ -17,18 +17,17 @@ html, body {
   --text-muted: #4a4a4a;
   --card-border: #d9d9d9;
   --accent: #2f7dbe;
-  --shadow: rgba(0,0,0,.18);
+  --shadow: rgba(0, 0, 0, .18);
 }
 
 body {
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, 
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial,
     "Apple Color Emoji", "Segoe UI Emoji", sans-serif;
   color: var(--text-main);
   background: #fff;
   line-height: 1.6;
 }
 
-/* === Base IMG (requisito do auditor) === */
 img {
   width: 200px;
   height: auto;
@@ -36,28 +35,25 @@ img {
   margin: 0.5rem 0;
   border: 1px solid #e0e0e0;
   padding: 4px;
-  box-shadow: 0 4px 10px rgba(0,0,0,.12);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, .12);
 }
 
-/* Específicos (podem sobrescrever o base img) */
 main img {
-  width: 150px; /* foto de perfil */
+  width: 150px;
   height: auto;
 }
 
 aside img {
-  width: 200px; /* mantém 200px no aside */
+  width: 200px;
   height: auto;
 }
 
-/* Main */
 main {
   max-width: 840px;
   margin: 0 auto;
   padding: 24px 20px 0;
 }
 
-/* Aside */
 aside {
   width: 300px;
   margin: 1rem auto;
@@ -67,12 +63,10 @@ aside {
   color: #ffffff;
 }
 
-/* Parágrafos */
 p {
   padding: 0;
 }
 
-/* Footer */
 footer {
   margin-top: 2rem;
   border-top: 1px solid #e0e0e0;
@@ -80,7 +74,6 @@ footer {
   padding: 1rem 0 2rem;
 }
 
-/* Nav (pedido pelo auditor) */
 nav {
   background-color: #0b3d91;
   padding: 0.5rem 1rem;
@@ -93,7 +86,6 @@ nav a {
   text-decoration: none;
 }
 
-/* H1 (pedido pelo auditor) */
 h1 {
   color: #1b1b1b;
 }
