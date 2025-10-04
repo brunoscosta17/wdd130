@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Page Title (company + contact) -->
+    <title>White Water Rafting Co. — Contact Us</title>
+
+    <!-- Meta Description focused on contact page -->
+    <meta
+      name="description"
+      content="Contact White Water Rafting Co. for general inquiries, reservations, or website suggestions. Find our address, phone, email, and map."
+    />
+
+    <link rel="preload" href="styles/rafting.css" as="style" />
+    <link rel="stylesheet" href="styles/rafting.css" />
+  </head>
+  <body>
+    <!-- Header / Nav: keep identical to about.html -->
+    <header class="site-header">
+      <div class="brand">
+        <img
+          src="images/logo.png"
+          alt="White Water Rafting Co. logo"
+          width="64"
+          height="64"
+        />
+        <span class="brand-name">White Water Rafting Co.</span>
+      </div>
+
+      <nav class="site-nav" aria-label="Main">
+        <!-- Keep links/order exactly like about.html for uniformity -->
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li>
+            <a class="active" href="contact.html" aria-current="page"
+              >Contact</a
+            >
+          </li>
+          <li><a href="trips.html">Trips</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="main-content">
+      <h1 class="page-title">Contact Us</h1>
+
+      <!-- Grid: company info + map + form -->
+      <section class="contact-grid" aria-labelledby="contact-info-heading">
+        <!-- Company Info -->
+        <article class="company-card" id="company-info">
+          <h2 id="contact-info-heading">Company Information</h2>
+
+          <address>
+            <p>
+              <strong>Address</strong><br />
+              123 River Run Rd<br />
+              Jackson, WY 83001
+            </p>
+
+            <p>
+              <strong>Phone</strong><br />
+              Main: <a href="tel:+13075550123">+1 (307) 555-0123</a><br />
+              Reservations: <a href="tel:+13075550789">+1 (307) 555-0789</a>
+            </p>
+
+            <p>
+              <strong>Email</strong><br />
+              <a href="mailto:hello@wwrafting.example"
+                >hello@wwrafting.example</a
+              >
+            </p>
+          </address>
+
+          <div class="map-wrapper" aria-label="Location map">
+            <!-- Google Map embed (remove inline style per instructions) -->
+            <!-- Tip (English): Replace the src place_id or q= with your actual business location -->
+            <iframe
+              title="White Water Rafting Co. location on Google Maps"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Jackson%20Hole%20WY&output=embed"
+            >
+            </iframe>
+          </div>
+        </article>
+
+        <!-- Contact Form -->
+        <article class="form-card">
+          <h2>Send a Message</h2>
+
+          <!-- Accessible form: label/for, fieldset/legend for radios, required semantics -->
+          <form action="#" method="post" novalidate>
+            <!-- Name -->
+            <div class="form-row">
+              <label for="name">Full Name</label>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autocomplete="name"
+                required
+              />
+              <small id="name-help" class="help-text"
+                >Enter your first and last name.</small
+              >
+            </div>
+
+            <!-- Email -->
+            <div class="form-row">
+              <label for="email">Email Address</label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                autocomplete="email"
+                required
+                aria-describedby="email-help"
+              />
+              <small id="email-help" class="help-text"
+                >We'll reply to this email.</small
+              >
+            </div>
+
+            <!-- Purpose (radio buttons) -->
+            <fieldset class="form-row">
+              <legend>Message Purpose</legend>
+              <div class="radio-group">
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="purpose-general"
+                    name="purpose"
+                    value="general"
+                    required
+                  />
+                  <label for="purpose-general">General Inquiry</label>
+                </div>
+
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="purpose-reservation"
+                    name="purpose"
+                    value="reservation"
+                  />
+                  <label for="purpose-reservation">Reservation Question</label>
+                </div>
+
+                <div class="radio-item">
+                  <input
+                    type="radio"
+                    id="purpose-website"
+                    name="purpose"
+                    value="website"
+                  />
+                  <label for="purpose-website">Website Suggestion</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <!-- Message -->
+            <div class="form-row">
+              <label for="message">Your Message</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="6"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="form-row checkbox-row">
+              <input type="checkbox" id="newsletter" name="newsletter" />
+              <label for="newsletter"
+                >Please subscribe me to the monthly newsletter</label
+              >
+            </div>
+
+            <!-- Submit -->
+            <div class="form-row">
+              <button type="submit" class="btn-primary">Send Message</button>
+            </div>
+          </form>
+        </article>
+      </section>
+
+      <!-- Employee Profiles -->
+      <section class="employees" aria-labelledby="team-heading">
+        <h2 id="team-heading">Meet Our Team</h2>
+        <div class="employee-grid">
+          <figure class="employee-card">
+            <img
+              src="images/employee-1.jpg"
+              alt="Alex Johnson smiling in rafting gear"
+              width="320"
+              height="320"
+              loading="lazy"
+            />
+            <figcaption>Alex Johnson — Lead Guide</figcaption>
+          </figure>
+
+          <figure class="employee-card">
+            <img
+              src="images/employee-2.jpg"
+              alt="Priya Patel with life vest near the river"
+              width="320"
+              height="320"
+              loading="lazy"
+            />
+            <figcaption>Priya Patel — Safety Coordinator</figcaption>
+          </figure>
+
+          <figure class="employee-card">
+            <img
+              src="images/employee-3.jpg"
+              alt="Miguel Santos coordinating trip logistics"
+              width="320"
+              height="320"
+              loading="lazy"
+            />
+            <figcaption>Miguel Santos — Trip Manager</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer: keep identical to about.html -->
+    <footer class="site-footer">
+      <p>
+        &copy; <span id="year"></span> White Water Rafting Co. • All Rights
+        Reserved
+      </p>
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="site-plan.html">Site Plan</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script>
+      // Simple year update (English comment): Keeps footer year current.
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
