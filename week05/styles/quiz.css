@@ -1,0 +1,151 @@
+:root {
+    --bg: #f1f1f4;
+    --panel: #ffffff;
+    --ink: #1a1a1f;
+    --muted: #6a6a76;
+    --brand: #0a1a8a;
+
+    --brand-2: #0c0c5a;
+
+    --accent: #1010ff;
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(10, 10, 40, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif;
+    color: var(--ink);
+    background: linear-gradient(180deg, #f7f7fb 0%, #ececf6 100%);
+}
+
+.container {
+    max-width: 720px;
+    margin: 4rem auto;
+    padding: 0 1rem;
+}
+
+h1 {
+    margin: 0 0 1rem;
+    font-size: clamp(1.6rem, 1.3rem + 1.2vw, 2.2rem);
+    color: var(--brand);
+    letter-spacing: .2px;
+}
+
+.quiz-form {
+    background: var(--panel);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: 1.5rem;
+    border: 1px solid #e9e9f3;
+}
+
+.form-row {
+    display: grid;
+    gap: .5rem;
+    margin-bottom: 1.25rem;
+}
+
+label {
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+label code {
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    background: #f2f2f8;
+    padding: .05rem .4rem;
+    border-radius: .35rem;
+    border: 1px solid #e6e6f2;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    width: 100%;
+    padding: .8rem .9rem;
+    border-radius: .6rem;
+    border: 1px solid #dfe1f1;
+    background: #fff;
+    color: var(--ink);
+    font: inherit;
+    outline: none;
+    transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--muted);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #9aa3ff;
+    box-shadow: 0 0 0 3px rgba(16, 16, 255, .12);
+}
+
+.hint {
+    color: var(--muted);
+    font-size: .9rem;
+}
+
+.code {
+    display: inline-block;
+    padding: .35rem .5rem;
+    background: #292a2e;
+    color: #d7e0ff;
+    border-radius: .4rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+    font-size: .9rem;
+    margin-left: .25rem;
+}
+
+.btn-primary {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    border-radius: .8rem;
+    background: var(--brand);
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: .4px;
+    transition: transform .04s ease, background .2s ease, box-shadow .2s ease;
+    box-shadow: 0 8px 20px rgba(12, 12, 90, .18);
+}
+
+.btn-primary:hover {
+    background: var(--brand-2);
+}
+
+.btn-primary:active {
+    transform: translateY(1px);
+}
+
+.btn-primary:focus-visible {
+    outline: 3px solid #bfc6ff;
+    outline-offset: 3px;
+}
+
+@media (max-width: 520px) {
+    .quiz-form {
+        padding: 1.1rem;
+    }
+}
